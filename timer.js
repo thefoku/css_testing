@@ -8,3 +8,4 @@
  bread.after(div)
 
 console.log('Button is clicked')}
+ window.onload = test;
