@@ -1,0 +1,10 @@
+.roma-timer {
+    font-size:24px;
+    background-color:#00ffee5e!important;
+    border-radius:20px;
+    display:flex!important;
+    padding:5px 5px!important;
+    margin:10px!important;
+    justify-content:center;
+    width:250px;
+}
