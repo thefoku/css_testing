@@ -1,14 +1,14 @@
- function test(){
- const bread = document.querySelector('.ec-breadcrumbs')
+//  function test(){
+//  const bread = document.querySelector('.ec-breadcrumbs')
 
- const div = document.createElement('div')
- div.innerHTML = `<p class='roma-timer'>Timer 00 : 00 : 00</p>`
- div.className = 'azi'
+//  const div = document.createElement('div')
+//  div.innerHTML = `<p class='roma-timer'>Timer 00 : 00 : 00</p>`
+//  div.className = 'azi'
  
- bread.after(div)
+//  bread.after(div)
 
-console.log('Button is clicked')}
- window.onload = test;
+// console.log('Button is clicked')}
+//  window.onload = test;
 
 function add(){
  const bread = document.querySelector('.ec-likely')
@@ -32,11 +32,17 @@ console.log('Add function has loaded')};
 //Ecwid.OnPageLoaded.add(function() {
 //    console.log('test onload')
 //});
-window.onload = function pik(){
-console.log('Pikk')
-add()
-}
 document.addEventListener('DOMContentLoaded', function() {
      console.log('test onload with DOM')
 }, false);
+
+
+Ecwid.OnAPILoaded.add(() => {
+    Ecwid.OnPageLoaded.add(page => {
+        console.log(page);
+        if (page.type === `PRODUCT`) {
+            add();
+        }
+    });
+});
 
