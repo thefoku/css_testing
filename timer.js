@@ -1,3 +1,5 @@
+var Ecwid;
+
 //  function test(){
 //  const bread = document.querySelector('.ec-breadcrumbs')
 
@@ -28,10 +30,14 @@ function add(){
 </div>`
  div.className = 'added-text'
  bread.after(div)
-console.log('Add function has loaded')};
+console.log('Add function has loaded')
+};
+
+
 //Ecwid.OnPageLoaded.add(function() {
 //    console.log('test onload')
 //});
+
 document.addEventListener('DOMContentLoaded', function() {
      console.log('test onload with DOM')
 }, false);
