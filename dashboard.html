@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html style="height:100%" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	
+
+	<meta name="apple-itunes-app" id="apple-itunes-app" content="app-id=626731456"/>
+	<meta name="application-name" content="Ecwid Control Panel" />
+	<meta name="referrer" content="origin" />
+
+	<title>Ecwid Control Panel</title>
+
+	<link rel='stylesheet' href='https://d1hsze2rjr01lo.cloudfront.net/cp-css/CP-legacy.css?hc=-792751191' />
+	<link rel='stylesheet' href='https://d1hsze2rjr01lo.cloudfront.net/cp-css/ecwid-app-ui.css?hc=-1565443959' />
+	<link rel='stylesheet' href='https://d1hsze2rjr01lo.cloudfront.net/cp-css/CP-wizard.css?hc=297440702' />
+	<link rel='stylesheet' href='https://d1hsze2rjr01lo.cloudfront.net/cp-css/CP-billing.css?hc=-1571479380' />
+	<link rel='stylesheet' href='https://d1hsze2rjr01lo.cloudfront.net/cp-css/CP-pos.css?hc=-599404801' />
+	<link rel='stylesheet' href='https://d1hsze2rjr01lo.cloudfront.net/cp-css/CP.css?hc=1613168802' />
+
+	
+	<link rel="shortcut icon" href="https://d3cy3u1txmkqs3.cloudfront.net/static/br/2023-12962-gf94776cc765f96/favicon.ico"/>
+	<link rel="shortcut icon" href="https://d3cy3u1txmkqs3.cloudfront.net/static/br/2023-12962-gf94776cc765f96/favicon64.png"/>
+	<link rel="apple-touch-icon" sizes="144x144" href="https://d3cy3u1txmkqs3.cloudfront.net/static/br/2023-12962-gf94776cc765f96/favicon144.png"/>
+	<link rel="mask-icon" color="#007AC9" href="https://d3cy3u1txmkqs3.cloudfront.net/static/br/2023-12962-gf94776cc765f96/favicon-pin.svg"/>
+
+	
+	
+	<script>window.ecwidKissMetricsData = {};</script>
+	<script>
+	var injectRosettaRetry = 0;
+	function tryInjectRosettaScript(cdnUrl, s3Url) {
+		injectRosettaRetry++;
+		var url = (injectRosettaRetry < 5) ? cdnUrl : s3Url;
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.onerror = function() {
+			document.getElementsByTagName('head')[0].removeChild(script);
+			if (injectRosettaRetry < 10) {
+				setTimeout(tryInjectRosettaScript.bind(this, cdnUrl, s3Url), 200);
+			} else {
+				if (!!window.ga) {
+                    window.ga('send', 'exception', {
+                        'exDescription': 'Translation with url ' + url + ' not loaded.',
+                        'exFatal': true
+                    });
+				}
+				console && console.error && console.error("Load translation failed: ", url);
+				window.ecwid_elm_config = window.ecwid_elm_config || {};
+				window.ecwid_elm_config.translations_load_failed_url = url;
+				if (!!window.ecwidEvents) {
+					window.ecwidEvents.trigger('TRANSLATIONS_LOAD_FAILED', url);
+				}
+				if (!!window.Ecwid && !!window.Ecwid.logException) {
+					window.Ecwid.logException('Failed to load translations. Url: ' + url + '. retry number: ' + injectRosettaRetry);
+				}
+			}
+		};
+		script.onload = function () {
+			window.ecwid_elm_config = window.ecwid_elm_config || {};
+			window.ecwid_elm_config.translations_loaded = true;
+			if (!!window.ecwidEvents) {
+				window.ecwidEvents.trigger('TRANSLATIONS_LOADED');
+			}
+		}
+        script.src = url;
+		document.getElementsByTagName('head')[0].appendChild(script);
+	}
+	</script>
+	<script src="https://d3cy3u1txmkqs3.cloudfront.net/rosetta/translations2022/backend/files/backend.en.-1340323262.js" onerror="tryInjectRosettaScript('https://d3cy3u1txmkqs3.cloudfront.net/rosetta/translations2022/backend/files/backend.en.-1340323262.js', 'https://d201eyh6wia12q.cloudfront.net/translations2022/backend/files/backend.en.-1340323262.translations')"></script>
+	<script>
+		var HC_LOCALE = 'en';
+	</script>
+
+	<script>
+window.ec = window.ec || {}
+window.ecwidEvents = {
+    bind: function(event, fct) {
+        this._events = this._events || {};
+        this._events[event] = this._events[event] || [];
+        this._events[event].push(fct);
+    },
+    unbind: function(event, fct) {
+        this._events = this._events || {};
+        if (event in this._events === false) return;
+        this._events[event].splice(this._events[event].indexOf(fct), 1);
+    },
+    trigger: function(event /* , args... */ ) {
+        this._events = this._events || {};
+        if (event in this._events === false) return;
+        for (var i = 0; i < this._events[event].length; i++) {
+            this._events[event][i].apply(this, Array.prototype.slice.call(arguments, 1));
+        }
+    }
+};
+window.ec.events=window.ecwidEvents;(function() {
+	window.ecwid_states_data = {
+		'data': null,
+		'loaded': function(data) {
+			window.ecwid_states_data.data = data;
+			window.ecwidEvents.trigger('STATES_DATA_LOADED', data);
+		},
+		'consume': function(callback) {
+			window.ecwidEvents.bind('STATES_DATA_LOADED', callback);
+			if (window.ecwid_states_data.data) {
+				callback(window.ecwid_states_data.data);
+			}
+		}
+	}
+})()
+!function(){"use strict";function o(){var o=window,t=document;if(!("scrollBehavior"in t.documentElement.style&&!0!==o.__forceSmoothScrollPolyfill__)){var l,e=o.HTMLElement||o.Element,r=468,i={scroll:o.scroll||o.scrollTo,scrollBy:o.scrollBy,elementScroll:e.prototype.scroll||n,scrollIntoView:e.prototype.scrollIntoView},s=o.performance&&o.performance.now?o.performance.now.bind(o.performance):Date.now,c=(l=o.navigator.userAgent,new RegExp(["MSIE ","Trident/","Edge/"].join("|")).test(l)?1:0);o.scroll=o.scrollTo=function(){void 0!==arguments[0]&&(!0!==f(arguments[0])?h.call(o,t.body,void 0!==arguments[0].left?~~arguments[0].left:o.scrollX||o.pageXOffset,void 0!==arguments[0].top?~~arguments[0].top:o.scrollY||o.pageYOffset):i.scroll.call(o,void 0!==arguments[0].left?arguments[0].left:"object"!=typeof arguments[0]?arguments[0]:o.scrollX||o.pageXOffset,void 0!==arguments[0].top?arguments[0].top:void 0!==arguments[1]?arguments[1]:o.scrollY||o.pageYOffset))},o.scrollBy=function(){void 0!==arguments[0]&&(f(arguments[0])?i.scrollBy.call(o,void 0!==arguments[0].left?arguments[0].left:"object"!=typeof arguments[0]?arguments[0]:0,void 0!==arguments[0].top?arguments[0].top:void 0!==arguments[1]?arguments[1]:0):h.call(o,t.body,~~arguments[0].left+(o.scrollX||o.pageXOffset),~~arguments[0].top+(o.scrollY||o.pageYOffset)))},e.prototype.scroll=e.prototype.scrollTo=function(){if(void 0!==arguments[0])if(!0!==f(arguments[0])){var o=arguments[0].left,t=arguments[0].top;h.call(this,this,void 0===o?this.scrollLeft:~~o,void 0===t?this.scrollTop:~~t)}else{if("number"==typeof arguments[0]&&void 0===arguments[1])throw new SyntaxError("Value could not be converted");i.elementScroll.call(this,void 0!==arguments[0].left?~~arguments[0].left:"object"!=typeof arguments[0]?~~arguments[0]:this.scrollLeft,void 0!==arguments[0].top?~~arguments[0].top:void 0!==arguments[1]?~~arguments[1]:this.scrollTop)}},e.prototype.scrollBy=function(){void 0!==arguments[0]&&(!0!==f(arguments[0])?this.scroll({left:~~arguments[0].left+this.scrollLeft,top:~~arguments[0].top+this.scrollTop,behavior:arguments[0].behavior}):i.elementScroll.call(this,void 0!==arguments[0].left?~~arguments[0].left+this.scrollLeft:~~arguments[0]+this.scrollLeft,void 0!==arguments[0].top?~~arguments[0].top+this.scrollTop:~~arguments[1]+this.scrollTop))},e.prototype.scrollIntoView=function(){if(!0!==f(arguments[0])){var l=function(o){for(;o!==t.body&&!1===(e=p(l=o,"Y")&&a(l,"Y"),r=p(l,"X")&&a(l,"X"),e||r);)o=o.parentNode||o.host;var l,e,r;return o}(this),e=l.getBoundingClientRect(),r=this.getBoundingClientRect();l!==t.body?(h.call(this,l,l.scrollLeft+r.left-e.left,l.scrollTop+r.top-e.top),"fixed"!==o.getComputedStyle(l).position&&o.scrollBy({left:e.left,top:e.top,behavior:"smooth"})):o.scrollBy({left:r.left,top:r.top,behavior:"smooth"})}else i.scrollIntoView.call(this,void 0===arguments[0]||arguments[0])}}function n(o,t){this.scrollLeft=o,this.scrollTop=t}function f(o){if(null===o||"object"!=typeof o||void 0===o.behavior||"auto"===o.behavior||"instant"===o.behavior)return!0;if("object"==typeof o&&"smooth"===o.behavior)return!1;throw new TypeError("behavior member of ScrollOptions "+o.behavior+" is not a valid value for enumeration ScrollBehavior.")}function p(o,t){return"Y"===t?o.clientHeight+c<o.scrollHeight:"X"===t?o.clientWidth+c<o.scrollWidth:void 0}function a(t,l){var e=o.getComputedStyle(t,null)["overflow"+l];return"auto"===e||"scroll"===e}function d(t){var l,e,i,c,n=(s()-t.startTime)/r;c=n=n>1?1:n,l=.5*(1-Math.cos(Math.PI*c)),e=t.startX+(t.x-t.startX)*l,i=t.startY+(t.y-t.startY)*l,t.method.call(t.scrollable,e,i),e===t.x&&i===t.y||o.requestAnimationFrame(d.bind(o,t))}function h(l,e,r){var c,f,p,a,h=s();l===t.body?(c=o,f=o.scrollX||o.pageXOffset,p=o.scrollY||o.pageYOffset,a=i.scroll):(c=l,f=l.scrollLeft,p=l.scrollTop,a=n),d({scrollable:c,method:a,startTime:h,startX:f,startY:p,x:e,y:r})}}"object"==typeof exports&&"undefined"!=typeof module?module.exports={polyfill:o}:o()}();
+	</script>
+	<script type="text/javascript" src="https://d3dq8sxcny4hg.cloudfront.net/states.js?version=2023-12962-gf94776cc765f96&callback=window.ecwid_states_data.loaded" async></script>
+
+</head>
+
+<body style="margin:0px;padding:0px;height:100%" class="loading">
+
+
+<table id="loader-old" style="width:100%; height:100%; z-index:10000000; display: none;">
+	<tr>
+		<td align="center" valign="middle">
+			<img style="border:none;vertical-align:middle" data-src="https://d3cy3u1txmkqs3.cloudfront.net/static/br/2023-12962-gf94776cc765f96/ajax-loader_cp.gif" id="oldLoader">
+		</td>
+	</tr>
+</table>
+
+<div class="loading-panel" id="loader" style="display: none;">
+	<div class="loader loader-mixed">
+		<div class="spinner-ball-outer"></div>
+		<div class="spinner-ball-inner"></div>
+	</div>
+	<div class="loading-info">Loading control panel</div>
+</div>
+
+<script type="text/javascript">
+	window.amazon_image_domain='https://d2j6dbq0eux0bg.cloudfront.net';
+	var gwtSignature = "1b1c23d2b2417141b4e2e5736f0dafaf-0";
+	window.Ecwid = window.Ecwid || {};
+	window.Ecwid.cpVersion = '2023-12962-gf94776cc765f96';
+	window.Ecwid.registerEmbeddedCpAppBootstraps = function() {
+		(function(){"use strict";const e=window.EmbeddedCpAppSdk,s={cpPage:"lspayments"};function t(){return e.storeInfo.get().then(a=>a.paymentMethods.some(n=>n.moduleName==="LsPayments"))}e.registerAppService({serviceName:"lspayments",assetsBaseUrl:"https://lspayments.ecwid.com/static/2023/2023-13215-g1957167b6f343d/",pageBootstraps:[{appName:s.cpPage,scriptUrls:["https://lspayments.ecwid.com/static/2023/2023-13215-g1957167b6f343d/js/cp-page.js", "https://lspayments.ecwid.com/static/2023/2023-13215-g1957167b6f343d/js/vendor.js","https://d3cy3u1txmkqs3.cloudfront.net/rosetta/translations2022/lspayments/files/lspayments.en.262485538.js"],appUrl:"https://lspayments.ecwid.com",isMenuItemAvailable:t,getMenuItemTitle:()=>Promise.resolve(e.getLocalizedMessage("ControlPanel.finance"))}]})})();
+
+(function(){"use strict";const e=window.EmbeddedCpAppSdk,a={extrafieldSettings:"extrafield-settings",extrafieldSettingsBlock:"extrafield-settings-block",customOrderStatuses:"custom-order-statuses"},s={appName:a.extrafieldSettings,scriptUrls:["https://us-vir4-cpsettings.ecwid.com/static/2023/2023-13215-g1957167b6f343d/js/extrafield-settings.js", "https://us-vir4-cpsettings.ecwid.com/static/2023/2023-13215-g1957167b6f343d/js/vendor.js", "https://us-vir4-cpsettings.ecwid.com/static/2023/2023-13215-g1957167b6f343d/js/shared.js","https://d3cy3u1txmkqs3.cloudfront.net/rosetta/translations2022/cpsettings/files/cpsettings.en.122033634.js"],appUrl:"https://us-vir4-cpsettings.ecwid.com",isMenuItemAvailable:()=>e.storeInfo.get().then(t=>{const r=t.account.availableFeatures.CHECKOUT_CUSTOM_FIELDS.available,l=t.account.availableFeatures.CHECKOUT_CUSTOM_FIELDS.availableOnSameOrHigherPlan;return r||l}),getMenuItemTitle:()=>Promise.resolve(e.getLocalizedMessage("NavigationMenu.CustomCheckoutFields"))},i={appName:a.customOrderStatuses,scriptUrls:["https://us-vir4-cpsettings.ecwid.com/static/2023/2023-13215-g1957167b6f343d/js/custom-order-statuses.js", "https://us-vir4-cpsettings.ecwid.com/static/2023/2023-13215-g1957167b6f343d/js/vendor.js", "https://us-vir4-cpsettings.ecwid.com/static/2023/2023-13215-g1957167b6f343d/js/shared.js","https://d3cy3u1txmkqs3.cloudfront.net/rosetta/translations2022/cpsettings/files/cpsettings.en.122033634.js"],appUrl:"https://us-vir4-cpsettings.ecwid.com",isMenuItemAvailable:()=>e.storeInfo.get().then(t=>t.account.availableFeatures.CUSTOM_ORDER_STATUSES.available),getMenuItemTitle:()=>Promise.resolve(e.getLocalizedMessage("NavigationMenu.CustomOrderStatuses"))};e.registerAppService({serviceName:"cpsettings",assetsBaseUrl:"https://us-vir4-cpsettings.ecwid.com/static/2023/2023-13215-g1957167b6f343d/",pageBootstraps:[s,i]})})();
+
+(function(){"use strict";const t=window.EmbeddedCpAppSdk,o={cpPage:"imex"},a={MODE:"mode",FILE_ID:"fileId",IMPORT_ID:"importId"},l={FILE_DETAILS:"fileDetails",IMPORT_DETAILS:"importDetails"};function c(e){return t.formatting.formatDateTime({value:e,format:"HUMAN_DATE_TIME"})}function f(e){return e==null?"":c(new Date(e))}const m=t.navigation.getRouteName({appName:o.cpPage});function r(e){t.navigation.gotoRoute({route:{name:m,params:e}})}function u(e){r({[a.MODE]:l.IMPORT_DETAILS,[a.IMPORT_ID]:e.id.toString()})}let i=null;function p(e){t.notifications.acknowledgeNotification({appName:o.cpPage,data:{finishedImportJobId:e.id}})}function n(){i!=null&&(p(i.finishedImportJob),i.onHideNotificationCallback(),i=null)}function I(e){var s;if(i!=null)return;const d=e.fileInfo.fileName,E=f((s=e.finishDate)!=null?s:""),g=[{appearance:"PRIMARY_ACCENT",size:"LARGE",htmlContent:t.getLocalizedMessage("Imex.Notification.Finished.button"),fullWidth:!0,onClicked:()=>{n(),u(e)}}],N=t.notifications.showPopupNotification({state:"SUCCESS",icon:"CHECK",htmlTitle:t.getLocalizedMessage("Imex.Notification.Finished.title"),htmlContent:t.getLocalizedMessage("Imex.Notification.Finished.content",{fileName:d,finishDate:E}),actionButtons:g,onCloseClicked:n});i={finishedImportJob:e,onHideNotificationCallback:N}}t.registerAppService({serviceName:"imex",assetsBaseUrl:"https://d34ikvsdm2rlij.cloudfront.net/imex/static/2023/2023-13215-g1957167b6f343d/",pageBootstraps:[{appName:o.cpPage,scriptUrls:["https://d34ikvsdm2rlij.cloudfront.net/imex/static/2023/2023-13215-g1957167b6f343d/js/cp-page.js", "https://d34ikvsdm2rlij.cloudfront.net/imex/static/2023/2023-13215-g1957167b6f343d/js/vendor.js","https://d3cy3u1txmkqs3.cloudfront.net/rosetta/translations2022/imex/files/imex.en.-377364574.js"],appUrl:"https://us-vir4-imex.ecwid.com",isMenuItemAvailable:()=>t.storeInfo.get().then(e=>e.featureToggles.NEW_IMPORT_EXPORT.enabled),getMenuItemTitle:()=>Promise.resolve(t.getLocalizedMessage("NavigationMenu.ImportExport")),notificationsUrl:"https://us-vir4-imex.ecwid.com/api/v1/notifications",onNotificationsReceived:e=>{e.finishedImportJob!=null?I(e.finishedImportJob):n()}}]})})();
+
+(function(){"use strict";const e=window.EmbeddedCpAppSdk,p={appName:{cpBlock:"dashboard-embedding-cp"}.cpBlock,scriptUrls:["https://d34ikvsdm2rlij.cloudfront.net/dashboard/static/2023/2023-13215-g1957167b6f343d/js/cp-page.js", "https://d34ikvsdm2rlij.cloudfront.net/dashboard/static/2023/2023-13215-g1957167b6f343d/js/vendor.js","https://ecwid-rosetta.s3.amazonaws.com/translations2022/dashboard/files/dashboard.en.1200104642.js"],appUrl:"https://dashboard.ecwid.com",getFeatureTitle:()=>e.getLocalizedMessage("DashboardApp"),maintenanceModeView:{type:"BLOCK",iconSize:"medium"}};e.registerAppService({serviceName:"dashboard",assetsBaseUrl:"https://d34ikvsdm2rlij.cloudfront.net/dashboard/static/2023/2023-13215-g1957167b6f343d/",blockBootstraps:[p]})})();
+
+(function(){"use strict";const e=window.EmbeddedCpAppSdk,t={cpPage:"domenator-cp-page",cpBlock:"domenator-cp-block"},s={appName:t.cpPage,scriptUrls:["https://domenator.ecwid.com/static/2023/2023-12962-gf94776cc765f96/js/cp-page.js", "https://domenator.ecwid.com/static/2023/2023-12962-gf94776cc765f96/js/vendor.js", "https://domenator.ecwid.com/static/2023/2023-12962-gf94776cc765f96/js/shared.js","https://d3cy3u1txmkqs3.cloudfront.net/rosetta/translations2022/domenator/files/domenator.en.-2073117278.js"],styleAssetUrls:["https://domenator.ecwid.com/static/2023/2023-12962-gf94776cc765f96/assets/cp-page.css"],appUrl:"https://domenator.ecwid.com",isMenuItemAvailable:()=>Promise.resolve(!0),getMenuItemTitle:()=>Promise.resolve(e.getLocalizedMessage("NavigationMenu.domenator"))},p={appName:t.cpBlock,scriptUrls:["https://domenator.ecwid.com/static/2023/2023-12962-gf94776cc765f96/js/cp-block.js", "https://domenator.ecwid.com/static/2023/2023-12962-gf94776cc765f96/js/vendor.js", "https://domenator.ecwid.com/static/2023/2023-12962-gf94776cc765f96/js/shared.js","https://d3cy3u1txmkqs3.cloudfront.net/rosetta/translations2022/domenator/files/domenator.en.-2073117278.js"],styleAssetUrls:["https://domenator.ecwid.com/static/2023/2023-12962-gf94776cc765f96/assets/cp-block.css"],appUrl:"https://domenator.ecwid.com",getFeatureTitle:()=>e.getLocalizedMessage("EmbeddedCPBlockTitle.domenator"),maintenanceModeView:{type:"BLOCK",iconSize:"medium"}};e.registerAppService({serviceName:"domenator",assetsBaseUrl:"https://domenator.ecwid.com/static/2023/2023-12962-gf94776cc765f96/",pageBootstraps:[s],blockBootstraps:[p]})})();
+
+	};
+</script>
+
+<script type="text/javascript" language="javascript">
+	function ecwid_createCookie(name,value,days) {
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime()+(days*24*60*60*1000));
+			var expires = "; expires="+date.toGMTString();
+		}
+		else var expires = "";
+		document.cookie = name+"="+value+expires+"; path=/";
+	}
+
+	function ecwid_readCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		}
+		return null;
+	}
+	var ecwid_static_url = 'https://d3cy3u1txmkqs3.cloudfront.net/static/br/2023-12962-gf94776cc765f96/';
+	var ecwid_logout_url = null;
+	var ecwid_hidden_dialogs = 'Terms';
+	var ecwid_onboarding_wizard_enabled = true;
+	var ecwid_use_new_loader = !false && document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
+	var ecwid_loader_logo_url = 'https://d3cy3u1txmkqs3.cloudfront.net/static/br/2023-12962-gf94776cc765f96/ajax-loader_cp.gif';
+	var ecwid_store_block_info = {"blockReasons":[],"lifetimeGmv":0.0};
+	var ecwid_venera_cdn_host_url = 'https://d3cy3u1txmkqs3.cloudfront.net/venera';
+	var ecwid_venera_hash = '8f40f241e72a217877ffc6b00d00f0ee';
+
+	function ecwid_getUrlParam(url, paramName) {
+		var url = url.split("#");
+		url = url[0];
+		var query = url.split("?");
+		if (query.length > 1) {
+			var params = query[1].split("&");
+			for (var i = 0; i < params.length; i++) {
+				var paramPair = params[i].split("=");
+				if (paramPair[0] == paramName) {
+					return paramPair.length > 1 ? paramPair[1] : "";
+				}
+			}
+		}
+		return undefined;
+	}
+
+	function ecwid_addUrlParam(url, paramPair) {
+		if (url.indexOf("?") != -1) {
+			url = url.replace("?", "?" + paramPair + "&");
+		} else if (url.indexOf("#") != -1) {
+			url = url.replace("#", "?" + paramPair + "#");
+		} else {
+			url += "?" + paramPair;
+		}
+		return url;
+	}
+
+	function ecwid_doRedirect(url) {
+		// Preserve inline parameter if it exists in current query string
+		var inlineParam = ecwid_getUrlParam(window.location.href, "inline");
+		if (inlineParam != undefined) {
+			url = ecwid_addUrlParam(url, "inline=" + inlineParam);
+		}
+		if (window.console) {
+			window.console.log("doRedirect to url: " + url);
+		}
+		location.replace(url);
+		document.body.style.display = "none";
+		setTimeout(function() {
+			location.reload(true);
+		}, 300);
+	}
+
+	function ecwid_showElement(el) {
+		if (el.style.removeProperty) {
+			el.style.removeProperty("display");
+		} else {
+			el.style.removeAttribute("display");
+		}
+	}
+
+	function ecwid_exchangeSrcAttr(el) {
+		el.src = el.getAttribute("data-src");
+	}
+
+	function ecwid_initLoader() {
+		if (ecwid_use_new_loader) {
+			ecwid_showElement(document.getElementById("loader"));
+		} else {
+			ecwid_exchangeSrcAttr(document.getElementById("oldLoader"));
+			ecwid_showElement(document.getElementById("loader-old"));
+		}
+	}
+
+	window.ecwidReginaCsrfToken = "ef005eaf19c1f5d658e10d5bd0c25c8b";
+
+    function ecwid_initMobileJsApi() {
+		window.EcwidControlPanel = window.EcwidControlPanel || {};
+		window.EcwidControlPanel.onSavePageDataRequired = function(changePageDataCallback) {
+			window.EcwidControlPanel.changePageDataCallback = changePageDataCallback;
+		}
+		window.EcwidControlPanel.onSavePageData = function(savePageDataCallback) {
+			window.EcwidControlPanel.savePageDataCallback = savePageDataCallback;
+		}
+		window.EcwidControlPanel.onRevertUnsavedPageData = function(revertUnsavedPageDataCallback) {
+			window.EcwidControlPanel.revertUnsavedPageDataCallback = revertUnsavedPageDataCallback;
+		}
+    }
+</script>
+<script type="text/javascript" src="https://d3cy3u1txmkqs3.cloudfront.net/static/br/2023-12962-gf94776cc765f96/ru.cdev.xnext.backend.CP.nocache.js"></script>
+
+<script type="text/javascript">
+	ecwid_initLoader();
+	ecwid_initMobileJsApi();
+</script>
+<script src="https://d3u173cvt0s8do.cloudfront.net/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>
