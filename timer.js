@@ -52,3 +52,10 @@ Ecwid.OnAPILoaded.add(() => {
     });
 });
 
+
+var this_url = encodeURIComponent(window.location.host);
+var ecomecwid = document.querySelector('#my-store-44275760')
+if (this_url == 'https://ecwid-test-navigation-menu.netlify.app/')
+{
+    ecomecwid.style = "display:none;"
+}
